@@ -1,0 +1,31 @@
+@import "./inter.css";
+@import "./montserrat.css";
+
+@import "tailwindcss";
+@plugin "tailwindcss-motion";
+
+@theme inline {
+  --font-fallback: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-inter: Inter, var(--font-fallback);
+  --font-montserrat: Montserrat, var(--font-fallback);
+
+  --default-transition-duration: 500ms;
+}
+
+@layer theme {
+  :focus {
+    @apply outline-none;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-emerald-500;
+  }
+}
+
+@layer utilities {
+  strong,
+  b {
+    @apply font-bold;
+  }
+}
