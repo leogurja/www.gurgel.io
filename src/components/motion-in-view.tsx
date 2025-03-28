@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils/cn";
+import { cn } from "@/utils/cn";
 import { useIntersectionObserver } from "@react-hooks-library/core";
 import { type ComponentProps, type ElementType, useRef } from "react";
 

@@ -1,3 +1,4 @@
+import { Navbar } from "@/components/layout/navbar";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
@@ -40,7 +41,7 @@ export const metadata = {
 
 export const viewport = {
   colorScheme: "dark",
-  themeColor: "#020617",
+  themeColor: "oklch(0.129 0.042 264.695)",
 } satisfies Viewport;
 
 export default function RootLayout({
@@ -49,7 +50,10 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="bg-slate-950">
+    <html
+      lang="pt-BR"
+      className="scrollbar-thumb-gray-900 scrollbar-track-transparent scrollbar-hover:scrollbar-gray-800 scrollbar-thumb-rounded-full bg-gray-950"
+    >
       <head>
         <link
           rel="preconnect"
@@ -57,7 +61,8 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="min-h-screen scroll-smooth text-slate-50 antialiased">
+      <body className="font-inter min-h-screen scroll-smooth text-gray-100 antialiased">
+        <Navbar />
         {children}
         <Analytics />
         <SpeedInsights />
