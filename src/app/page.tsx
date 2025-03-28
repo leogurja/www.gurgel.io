@@ -70,7 +70,6 @@ export default function Home() {
           </Button>
         </div>
       </SectionContainer>
-      <footer>fdhjkslaunhv4ioa</footer>
     </main>
   );
 }
