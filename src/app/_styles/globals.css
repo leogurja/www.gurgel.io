@@ -2,7 +2,6 @@
 @import "./montserrat.css";
 
 @import "tailwindcss";
-@plugin "tailwindcss-motion";
 
 @theme inline {
   --font-fallback: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
@@ -11,6 +10,14 @@
   --font-montserrat: Montserrat, var(--font-fallback);
 
   --default-transition-duration: 500ms;
+
+  --animate-gradient: gradient-animation 60s linear infinite;
+
+  @keyframes gradient-animation {
+    to {
+      background-position-x: 600%;
+    }
+  }
 }
 
 @layer theme {
@@ -20,6 +27,31 @@
 
   :focus-visible {
     @apply outline-2 outline-emerald-500;
+  }
+
+  .bg-rainbow {
+    background-size: 600% 100%;
+    background-image: linear-gradient(
+      to right,
+      oklch(0.637 0.237 25.331),
+      oklch(0.705 0.213 47.604),
+      oklch(0.769 0.188 70.08),
+      oklch(0.795 0.184 86.047),
+      oklch(0.768 0.233 130.85),
+      oklch(0.723 0.219 149.579),
+      oklch(0.696 0.17 162.48),
+      oklch(0.704 0.14 182.503),
+      oklch(0.715 0.143 215.221),
+      oklch(0.685 0.169 237.323),
+      oklch(0.623 0.214 259.815),
+      oklch(0.585 0.233 277.117),
+      oklch(0.606 0.25 292.717),
+      oklch(0.627 0.265 303.9),
+      oklch(0.667 0.295 322.15),
+      oklch(0.656 0.241 354.308),
+      oklch(0.645 0.246 16.439),
+      oklch(0.637 0.237 25.331)
+    );
   }
 }
 

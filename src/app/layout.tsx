@@ -49,7 +49,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="bg-slate-950">
       <head>
         <link
           rel="preconnect"
@@ -57,7 +57,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="min-h-screen scroll-smooth bg-slate-50 text-slate-900 antialiased">
+      <body className="min-h-screen scroll-smooth text-slate-50 antialiased">
         {children}
         <Analytics />
         <SpeedInsights />
