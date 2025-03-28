@@ -11,26 +11,28 @@ export default function Home() {
     <main className="container mx-auto min-h-screen">
       <SectionContainer
         id="hero"
-        className="flex h-screen flex-col items-center justify-center text-center"
+        className="flex h-screen flex-col items-center justify-center gap-8 px-4 text-center"
       >
         <Image
-          className="mb-20 aspect-square rounded-full object-cover"
+          className="aspect-square size-32 rounded-full object-cover md:size-48 lg:size-64"
           src={avatarImage.src}
           alt=""
           width={256}
           height={256}
           blurDataURL={avatarImage.blurDataURL ?? ""}
         />
-        <h1 className="max-w-7xl text-7xl font-black tracking-[-0.0125em] text-pretty">
+        <h1 className="max-w-7xl text-4xl/tight font-black tracking-[-0.0125em] text-pretty md:text-7xl">
           Desenvolvedor Full Stack especializado em{" "}
           <GradientText>ReactJS</GradientText>.
         </h1>
-        <p className="text-2xl/relaxed tracking-wide text-gray-400">
+        <p className="text-base tracking-wide text-pretty text-gray-400 md:text-xl/normal">
           Com 4 anos de experiência em desenvolvimento web e foco em aplicações
           de alto desempenho.
         </p>
-        <div className="mt-8 flex items-center gap-3 text-sm">
-          <Button size="xl">Entrar em contato</Button>
+        <div className="grid grid-flow-col grid-rows-2 gap-3 md:grid-rows-1">
+          <Button size="xl" asChild>
+            <a href="#a">Entrar em contato</a>
+          </Button>
           <Button variant="secondary" size="xl" asChild>
             <a
               href="/Leonardo Gurgel%20-%20Desenvolvedor%20Full%20Stack.pdf"

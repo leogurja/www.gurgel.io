@@ -5,7 +5,7 @@ export function GradientText({ className, ...rest }: ComponentProps<"span">) {
   return (
     <span
       className={cn(
-        "animate-gradient bg-rainbow bg-clip-text leading-relaxed text-transparent",
+        "animate-gradient bg-rainbow bg-clip-text text-transparent",
         className,
       )}
       {...rest}
