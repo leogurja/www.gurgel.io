@@ -1,8 +1,8 @@
 "use client";
 
+import { useIntersectionOnce } from "@/hooks/useIntersectionOnce";
 import { cn } from "@/utils/cn";
-import { useIntersectionObserver } from "@react-hooks-library/core";
-import { type ComponentProps, type ElementType, useRef } from "react";
+import type { ComponentProps, ElementType } from "react";
 
 type MotionInViewProps<T extends ElementType> = ComponentProps<T> & {
   threshold?: number;
@@ -15,8 +15,10 @@ export function MotionInView<T extends ElementType = "div">({
   as = "div",
   ...rest
 }: MotionInViewProps<T>) {
-  const ref = useRef(null);
-  const { inView } = useIntersectionObserver(ref, { threshold });
+  const [ref, didIntersect] = useIntersectionOnce({
+    threshold,
+    rootMargin: "0%",
+  });
   const Component = as;
 
   return (
@@ -24,7 +26,9 @@ export function MotionInView<T extends ElementType = "div">({
       ref={ref}
       className={cn(
         className,
-        inView ? "motion-safe:motion-running" : "motion-safe:motion-paused",
+        didIntersect
+          ? "motion-safe:motion-running"
+          : "motion-safe:motion-paused",
       )}
       {...rest}
     />

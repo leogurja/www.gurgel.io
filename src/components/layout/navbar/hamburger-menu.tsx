@@ -1,3 +1,5 @@
+"use client";
+import { cn } from "@/utils/cn";
 import { List } from "@phosphor-icons/react/dist/ssr";
 import {
   Content,
@@ -6,32 +8,42 @@ import {
   Root,
   Trigger,
 } from "@radix-ui/react-dropdown-menu";
+import { useState } from "react";
 import { Navlink } from "./navlink";
 
 export function HamburguerMenu() {
+  const [open, setOpen] = useState(false);
+
   return (
     <nav className="flex grow justify-end md:hidden">
-      <Root>
+      <Root open={open} onOpenChange={setOpen}>
         <Trigger asChild>
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-xl hover:text-indigo-500"
+            className="inline-flex items-center justify-center rounded-xl hover:text-emerald-500"
           >
             <List weight="bold" className="size-10" />
           </button>
         </Trigger>
         <Portal>
           <Content
-            className="mr-7 rounded-xl bg-gray-900 p-8 will-change-[opacity,transform]"
-            sideOffset={5}
+            className={cn("rounded-xl bg-zinc-900 p-8", {
+              "motion-safe:motion-preset-slide-left motion-ease-out-back motion-duration-500":
+                open,
+              "motion-safe:motion-translate-x-out-100 motion-safe:motion-opacity-out motion-ease-in motion-duration-200 motion-reduce:opacity-0":
+                !open,
+            })}
+            sideOffset={0}
+            align="end"
+            avoidCollisions={false}
           >
-            <Item className="group text-violet11 data-[highlighted]:bg-violet9 data-[disabled]:text-mauve8 data-[highlighted]:text-violet1 relative flex h-[25px] items-center rounded-[3px] pr-[5px] pl-[25px] text-[13px] leading-none outline-none select-none data-[disabled]:pointer-events-none">
+            <Item className="data-[highlighted]:bg-emerald-500 data-[highlighted]:text-emerald-500">
               <Navlink href="#about">Sobre mim</Navlink>
             </Item>
-            <Item>
+            <Item className="data-[highlighted]:bg-emerald-500 data-[highlighted]:text-emerald-500">
               <Navlink href="#experience">Projetos</Navlink>
             </Item>
-            <Item>
+            <Item className="data-[highlighted]:bg-emerald-500 data-[highlighted]:text-emerald-500">
               <Navlink href="#experience">Experiência</Navlink>
             </Item>
           </Content>

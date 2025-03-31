@@ -7,8 +7,9 @@ import "./_styles/globals.css";
 
 export const metadata = {
   title: "Leonardo Gurgel",
-  applicationName: "Leonardo Gurgel",
+  applicationName: "gurgel.io",
   description: "Desenvolvedor Full Stack especializado em React.js",
+  metadataBase: new URL("https://gurgel.io"),
   keywords: [
     "Leonardo",
     "Gurgel",
@@ -24,12 +25,8 @@ export const metadata = {
     "Ruby",
     "Rails",
     "Full Stack",
-    "Full-Stack",
-    "FullStack",
     "Front-end",
     "Back-end",
-    "Frontend",
-    "Backend",
   ],
   authors: { name: "Leonardo Gurgel", url: "https://gurgel.io" },
   creator: "Leonardo Gurgel",
@@ -52,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className="scrollbar-thumb-gray-900 scrollbar-track-transparent scrollbar-hover:scrollbar-gray-800 scrollbar-thumb-rounded-full bg-gray-950"
+      className="scrollbar-thumb-zinc-900 scrollbar-track-transparent scrollbar-hover:scrollbar-zinc-800 scrollbar-thumb-rounded-full w-full scroll-smooth bg-zinc-950"
     >
       <head>
         <link
@@ -61,7 +58,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="font-inter min-h-screen scroll-smooth text-gray-100 antialiased">
+      <body className="font-inter min-h-screen w-full text-zinc-100 antialiased">
         <Navbar />
         {children}
         <Analytics />

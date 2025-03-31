@@ -6,7 +6,7 @@ import { Navlink } from "./navlink";
 export function Navbar() {
   return (
     <header className="absolute top-0 flex w-full p-8">
-      <Link href="/" className="transition-colors hover:text-indigo-500">
+      <Link href="/" className="transition-colors hover:text-emerald-500">
         <Logo className="size-14" />
       </Link>
       <HamburguerMenu />
