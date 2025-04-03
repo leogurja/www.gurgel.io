@@ -1,8 +1,8 @@
-import { Navbar } from "@/components/layout/navbar";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { Navbar } from "@/components/layout/navbar";
 import "./_styles/globals.css";
 
 export const metadata = {
@@ -38,7 +38,7 @@ export const metadata = {
 
 export const viewport = {
   colorScheme: "dark",
-  themeColor: "oklch(0.129 0.042 264.695)",
+  themeColor: "oklch(0.147 0.004 49.25)",
 } satisfies Viewport;
 
 export default function RootLayout({
@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className="scrollbar-thumb-zinc-900 scrollbar-track-transparent scrollbar-hover:scrollbar-zinc-800 scrollbar-thumb-rounded-full w-full scroll-smooth bg-zinc-950"
+      className="scrollbar-thumb-stone-900 scrollbar-track-transparent scrollbar-hover:scrollbar-stone-800 scrollbar-thumb-rounded-full w-full scroll-smooth bg-stone-950"
     >
       <head>
         <link
@@ -58,7 +58,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="font-inter min-h-screen w-full text-zinc-100 antialiased">
+      <body className="min-h-screen w-full font-inter text-stone-100 antialiased">
         <Navbar />
         {children}
         <Analytics />
