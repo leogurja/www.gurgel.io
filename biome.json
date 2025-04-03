@@ -1,68 +1,145 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "assist": {
+    "actions": {
+      "recommended": true,
+      "source": {
+        "useSortedAttributes": "on",
+        "useSortedKeys": "on",
+        "useSortedProperties": "on"
+      }
+    },
+    "enabled": true
   },
-  "formatter": {
-    "enabled": false
-  },
-  "organizeImports": {
-    "enabled": false
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double"
+    },
+    "parser": {
+      "jsxEverywhere": false
+    }
   },
   "linter": {
     "enabled": true,
+    "domains": {
+      "next": "recommended"
+    },
     "rules": {
-      "recommended": true,
       "complexity": {
-        "noExcessiveCognitiveComplexity": "info",
-        "noUselessUndefinedInitialization": "warn",
-        "noUselessStringConcat": "warn",
-        "noVoid": "warn",
-        "useDateNow": "warn",
-        "useSimplifiedLogicExpression": "warn"
+        "noForEach": "on",
+        "noUselessStringConcat": "on",
+        "noUselessUndefinedInitialization": "on",
+        "noVoid": "on",
+        "useDateNow": "on",
+        "useSimplifiedLogicExpression": "on",
+        "useWhile": "on"
       },
       "correctness": {
-        "noConstantMathMinMaxClamp": "warn",
-        "noUndeclaredDependencies": "off",
-        "noUndeclaredVariables": "error",
-        "noUnusedFunctionParameters": "warn",
-        "noUnusedImports": "warn",
-        "noUnusedPrivateClassMembers": "warn",
-        "noUnusedVariables": "warn",
-        "useArrayLiterals": "warn",
-        "useHookAtTopLevel": "warn"
+        "noConstantMathMinMaxClamp": "on",
+        "noUndeclaredDependencies": "on",
+        "noUndeclaredVariables": "on",
+        "noUnusedFunctionParameters": "on",
+        "noUnusedImports": "on",
+        "noUnusedPrivateClassMembers": "on",
+        "noUnusedVariables": "on",
+        "useArrayLiterals": "on",
+        "useHookAtTopLevel": "on"
+      },
+      "nursery": {
+        "noAwaitInLoop": "on",
+        "noBitwiseOperators": "on",
+        "noConstantBinaryExpression": "on",
+        "noDescendingSpecificity": "on",
+        "noDocumentCookie": "on",
+        "noDuplicateCustomProperties": "on",
+        "noDuplicateElseIf": "on",
+        "noDuplicateFields": "on",
+        "noDuplicateProperties": "on",
+        "noDynamicNamespaceImportAccess": "on",
+        "noEnum": "on",
+        "noExportedImports": "on",
+        "noFloatingPromises": "on",
+        "noGlobalDirnameFilename": "on",
+        "noImportCycles": "on",
+        "noIrregularWhitespace": "on",
+        "noMissingVarFunction": "on",
+        "noNestedTernary": "on",
+        "noNoninteractiveElementInteractions": "on",
+        "noOctalEscape": "on",
+        "noProcessGlobal": "on",
+        "noSecrets": "on",
+        "noStaticElementInteractions": "on",
+        "noSubstr": "on",
+        "noTsIgnore": "on",
+        "noUnknownPseudoClass": "on",
+        "noUnknownPseudoElement": "on",
+        "noUnknownTypeSelector": "on",
+        "noUselessEscapeInRegex": "on",
+        "noUselessEscapeInString": "on",
+        "noUselessStringRaw": "on",
+        "noUselessUndefined": "on",
+        "noValueAtRule": "on",
+        "useAdjacentOverloadSignatures": "on",
+        "useAriaPropsSupportedByRole": "on",
+        "useAtIndex": "on",
+        "useCollapsedIf": "on",
+        "useConsistentCurlyBraces": "on",
+        "useConsistentMemberAccessibility": "on",
+        "useConsistentObjectDefinition": {
+          "level": "on",
+          "options": {
+            "syntax": "shorthand"
+          }
+        },
+        "useDeprecatedReason": "on",
+        "useGuardForIn": "on",
+        "useNamedOperation": "on",
+        "useSortedClasses": "on",
+        "useStrictMode": "on",
+        "useSymbolDescription": "on",
+        "useTrimStartEnd": "on",
+        "useValidAutocomplete": "on"
       },
       "performance": {
-        "noReExportAll": "info",
-        "useTopLevelRegex": "warn"
+        "noBarrelFile": "on",
+        "noDelete": "on",
+        "noReExportAll": "on",
+        "useTopLevelRegex": "on"
       },
+      "recommended": true,
       "style": {
-        "noNamespace": "error",
-        "noNamespaceImport": "warn",
-        "noNegationElse": "info",
-        "noParameterProperties": "warn",
-        "noShoutyConstants": "info",
-        "noYodaExpression": "warn",
-        "useCollapsedElseIf": "warn",
-        "useConsistentArrayType": "warn",
-        "useConsistentBuiltinInstantiation": "warn",
-        "useDefaultSwitchClause": "warn",
-        "useExplicitLengthCheck": "warn",
-        "useForOf": "warn",
-        "useFragmentSyntax": "warn",
-        "useNodeAssertStrict": "warn",
-        "useThrowNewError": "warn",
-        "useThrowOnlyError": "error",
-        "useShorthandAssign": "warn"
+        "noNamespace": "on",
+        "noNamespaceImport": "on",
+        "noNegationElse": "on",
+        "noParameterProperties": "on",
+        "noShoutyConstants": "on",
+        "noYodaExpression": "on",
+        "useCollapsedElseIf": "on",
+        "useConsistentArrayType": "on",
+        "useConsistentBuiltinInstantiation": "on",
+        "useDefaultSwitchClause": "on",
+        "useExplicitLengthCheck": "on",
+        "useForOf": "on",
+        "useFragmentSyntax": "on",
+        "useNodeAssertStrict": "on",
+        "useShorthandAssign": "on",
+        "useThrowNewError": "on",
+        "useThrowOnlyError": "on"
       },
       "suspicious": {
-        "noEvolvingTypes": "warn",
-        "useAwait": "warn",
-        "useErrorMessage": "warn",
-        "useNumberToFixedDigitsArgument": "warn"
+        "noConsole": "on",
+        "noEmptyBlockStatements": "on",
+        "noEvolvingTypes": "on",
+        "useAwait": "on",
+        "useErrorMessage": "on",
+        "useNumberToFixedDigitsArgument": "on"
       }
     }
+  },
+  "vcs": {
+    "clientKind": "git",
+    "defaultBranch": "main",
+    "enabled": true,
+    "useIgnoreFile": true
   }
 }

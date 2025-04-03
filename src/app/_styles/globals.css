@@ -1,3 +1,5 @@
+/** biome-ignore-all lint/correctness/noUnknownProperty: biome doesnt support this @plugin yet */
+
 @import "./fonts/inter.css";
 @import "./fonts/fira-code.css";
 
