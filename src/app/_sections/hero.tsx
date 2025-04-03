@@ -1,9 +1,10 @@
+import { SiGithub } from "@icons-pack/react-simple-icons";
+import { DownloadSimple } from "@phosphor-icons/react/dist/ssr";
+import Image from "next/image";
 import avatarImage from "@/assets/images/foto_perfil.png";
 import { AnimatedGradientText } from "@/components/gradient-text";
 import { LinkedInLogo } from "@/components/logos/linkedin.svg";
 import { Button } from "@/components/ui/button";
-import { SiGithub } from "@icons-pack/react-simple-icons";
-import Image from "next/image";
 
 export function Hero() {
   return (
@@ -19,12 +20,12 @@ export function Hero() {
         height={256}
         blurDataURL={avatarImage.blurDataURL ?? ""}
       />
-      <h1 className="max-w-7xl text-4xl/tight font-black tracking-[-0.0125em] text-pretty md:text-7xl">
+      <h1 className="max-w-7xl text-pretty font-black text-4xl/tight tracking-[-0.0125em] md:text-7xl">
         Desenvolvedor Full Stack especializado em{" "}
         <AnimatedGradientText>ReactJS</AnimatedGradientText>.
       </h1>
-      <p className="max-w-4xl text-base tracking-wide text-pretty text-zinc-400 md:text-xl/normal">
-        Me chamo <strong className="text-zinc-300">Leonardo Gurgel</strong>,
+      <p className="max-w-4xl text-pretty text-base text-stone-400 tracking-wide md:text-xl/normal">
+        Me chamo <strong className="text-stone-300">Leonardo Gurgel</strong>,
         tenho 4 anos de experiência em desenvolvimento web e foco em aplicações
         de alto desempenho.
       </p>
@@ -32,15 +33,28 @@ export function Hero() {
         <Button size="xl" asChild>
           <a href="#a">Entrar em contato</a>
         </Button>
-        <Button variant="secondary" size="xl" asChild>
-          <a
-            href="/Leonardo Gurgel%20-%20Desenvolvedor%20Full%20Stack.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Currículo
-          </a>
-        </Button>
+        <div className="flex w-full justify-between divide-x divide-stone-400/30">
+          <Button variant="secondary" size="xl" asChild>
+            <a
+              className="flex flex-1 rounded-r-none"
+              href="/Leonardo Gurgel%20-%20Desenvolvedor%20Full%20Stack.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Currículo
+            </a>
+          </Button>
+          <Button variant="secondary" size="xl" asChild>
+            <a
+              href="/Leonardo Gurgel%20-%20Desenvolvedor%20Full%20Stack.pdf"
+              download="cv_leonardo_gurgel.pdf"
+              className="rounded-l-none"
+            >
+              <span className="sr-only">Baixar Currículo</span>
+              <DownloadSimple className="size-5" />
+            </a>
+          </Button>
+        </div>
         <Button
           size="icon-xl"
           variant="secondary"
