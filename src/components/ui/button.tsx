@@ -1,11 +1,10 @@
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
-
-import { cn } from "@/utils/cn";
 import type { ComponentProps } from "react";
+import { cn } from "@/utils/cn";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl font-medium transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 focus-visible:border-zinc-300 focus-visible:ring-zinc-300/50 focus-visible:ring-1 aria-invalid:ring-rose-500/20 aria-invalid:border-rose-500",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl font-medium transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 focus-visible:border-stone-300 focus-visible:ring-stone-300/50 focus-visible:ring-1 aria-invalid:ring-rose-500/20 aria-invalid:border-rose-500",
   {
     variants: {
       variant: {
@@ -13,9 +12,9 @@ const buttonVariants = cva(
         destructive:
           "bg-rose-500 text-white shadow-xs hover:bg-rose-400 focus-visible:ring-rose-500/20",
         outline:
-          "border bg-zinc-950 shadow-xs hover:bg-sky-500 hover:text-white",
-        secondary: "bg-zinc-300 text-zinc-950 shadow-xs hover:bg-zinc-100",
-        ghost: "hover:bg-sky-700 hover:text-white",
+          "border border-emerald-500 text-emerald-500 bg-transparent shadow-xs hover:bg-emerald-500 hover:text-white",
+        secondary: "bg-stone-300 text-stone-950 shadow-xs hover:bg-stone-100",
+        ghost: "hover:bg-emerald-500 hover:text-white",
         link: "text-white hover:text-emerald-400",
       },
       size: {

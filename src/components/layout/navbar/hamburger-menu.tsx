@@ -27,7 +27,7 @@ export function HamburguerMenu() {
         </Trigger>
         <Portal>
           <Content
-            className={cn("rounded-xl bg-zinc-900 p-8", {
+            className={cn("rounded-xl bg-stone-900 p-8", {
               "motion-safe:motion-preset-slide-left motion-ease-out-back motion-duration-500":
                 open,
               "motion-safe:motion-translate-x-out-100 motion-safe:motion-opacity-out motion-ease-in motion-duration-200 motion-reduce:opacity-0":
