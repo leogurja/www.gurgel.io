@@ -1,8 +1,4 @@
 /** biome-ignore-all lint/correctness/noUnknownProperty: biome doesnt support this @plugin yet */
-
-@import "./fonts/inter.css";
-@import "./fonts/fira-code.css";
-
 @import "tailwindcss";
 @plugin "tailwindcss-motion";
 
@@ -18,33 +14,6 @@
   --default-transition-duration: 300ms;
 
   --animate-gradient: gradient-animation 60s linear infinite;
-
-  /* brand colors */
-  --color-bash: #4eaa25;
-  --color-css: rebeccapurple; /* RIP Rebecca 😭 */
-  --color-docker: #2496ed;
-  --color-firebase: #dd2c00;
-  --color-github: #181717;
-  --color-instagram: #ff0069;
-  --color-javascript: #f7df1e;
-  --color-linkedin: oklch(51.56% 0.1632 254.73);
-  --color-mariadb: #003545;
-  --color-mongodb: #47a248;
-  --color-mysql: #4479a1;
-  --color-nextjs: #000000;
-  --color-nodejs: #5fa04e;
-  --color-prisma: #2d3748;
-  --color-postgresql: #4169e1;
-  --color-react: #61dafb;
-  --color-redis: #ff4438;
-  --color-ruby: #cc342d;
-  --color-ruby-on-rails: #d30001;
-  --color-sqlite: #003b57;
-  --color-styled-components: #db7093;
-  --color-tailwindcss: #06b6d4;
-  --color-typescript: #3178c6;
-  --color-vite: #646cff;
-  --color-webpack: #8dd6f9;
 }
 
 @layer theme {
