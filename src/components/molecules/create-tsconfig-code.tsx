@@ -1,6 +1,5 @@
 "use client";
 
-import { clearInterval, setInterval } from "node:timers";
 import { useEffect, useState } from "react";
 import { useIntersectionOnce } from "@/lib/hooks/useIntersectionOnce";
 import { InquirerQuestion } from "../atoms/inquirer-question";
