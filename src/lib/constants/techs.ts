@@ -1,4 +1,19 @@
-import type { Tech } from "../types/types";
+export type TechName =
+	| "ReactJS"
+	| "Next.js"
+	| "Node.js"
+	| "TailwindCSS"
+	| "TypeScript"
+	| "Resend"
+	| "Vite"
+	| "Zustand"
+	| "NPM";
+
+export interface Tech {
+	name: TechName;
+	color: string;
+	site: string;
+}
 
 export const techs = [
 	{

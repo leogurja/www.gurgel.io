@@ -1,10 +1,9 @@
-import Link from "next/link";
 import { featuredProjects } from "@/lib/constants/featured-projects";
 import { SectionContainer } from "../atoms/section-container";
 import { ProjectCard } from "../molecules/project-card";
 import { SectionTitle } from "../molecules/section-title";
 
-export function Projects() {
+export function ProjectsSection() {
 	return (
 		<SectionContainer id="projects">
 			<SectionTitle number={2} className="from-rose-500 to-amber-400">
@@ -15,7 +14,7 @@ export function Projects() {
 					<ProjectCard {...project} key={project.title} />
 				))}
 			</div>
-			<div className="mt-8 text-center">
+			{/* <div className="mt-8 text-center">
 				<Link
 					href="/projects"
 					className="inline-flex gap-1 text-emerald-400 text-lg transition-all hover:ms-1 hover:gap-2 hover:text-emerald-200"
@@ -23,7 +22,7 @@ export function Projects() {
 					Ver Todos os Projetos
 					<span>→</span>
 				</Link>
-			</div>
+			</div> */}
 		</SectionContainer>
 	);
 }

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/atoms/logo.svg";
-import { Navlink } from "../molecules/navlink";
-import { HamburguerMenu } from "../organisms/hamburger-menu";
+import { Navlink } from "../atoms/navlink";
+import { HamburguerMenu } from "../molecules/hamburger-menu";
 
 export function Navbar() {
 	return (

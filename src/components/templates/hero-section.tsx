@@ -3,10 +3,10 @@ import { DownloadSimple } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import avatarImage from "@/assets/images/foto_perfil.png";
 import { Button } from "@/components/atoms/button";
+import { GradientText } from "@/components/atoms/gradient-text";
 import { LinkedInLogo } from "@/components/atoms/linkedin-logo.svg";
-import { AnimatedGradientText } from "@/components/molecules/animated-gradient-text";
 
-export function Hero() {
+export function HeroSection() {
 	return (
 		<section
 			id="hero"
@@ -23,16 +23,18 @@ export function Hero() {
 			/>
 			<h1 className="max-w-7xl text-pretty font-black text-4xl/tight tracking-[-0.0125em] md:text-7xl">
 				Desenvolvedor Full Stack especializado em{" "}
-				<AnimatedGradientText>ReactJS</AnimatedGradientText>.
+				<GradientText animated={true}>ReactJS</GradientText>.
 			</h1>
 			<p className="max-w-4xl text-pretty text-base text-stone-400 tracking-wide md:text-xl/normal">
 				Me chamo <strong className="text-stone-300">Leonardo Gurgel</strong>,
 				tenho 4 anos de experiência em desenvolvimento web e foco em aplicações
 				de alto desempenho.
 			</p>
-			<div className="grid grid-flow-col grid-rows-2 gap-3 md:grid-rows-1 md:grid-cols-[1fr_1fr]">
+			<div className="grid grid-flow-col grid-rows-2 gap-3 md:grid-cols-[1fr_1fr] md:grid-rows-1">
 				<Button size="xl" asChild>
-					<a href="#a">Entrar em contato</a>
+					<a href="mailto:leo@gurgel.io" target="_blank" rel="noreferrer">
+						Entrar em contato
+					</a>
 				</Button>
 				<div className="flex w-full divide-x divide-stone-400/30">
 					<Button intent="secondary" size="xl" asChild>

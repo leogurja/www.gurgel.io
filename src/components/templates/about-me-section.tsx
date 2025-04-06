@@ -4,7 +4,7 @@ import { SectionTitle } from "@/components/molecules/section-title";
 import { experience } from "@/lib/constants/experience";
 import { cn } from "@/lib/helpers/cn";
 
-export function AboutMe() {
+export function AboutMeSection() {
 	return (
 		<SectionContainer id="about">
 			<SectionTitle number={1} className="from-emerald-500 to-cyan-400">

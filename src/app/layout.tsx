@@ -2,7 +2,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Navbar } from "@/components/templates/navbar";
+import { Navbar } from "@/components/organisms/navbar";
 import "@/styles/globals.css";
 import { Fira_Code, Inter } from "next/font/google";
 

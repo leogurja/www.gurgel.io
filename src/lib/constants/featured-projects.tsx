@@ -2,11 +2,20 @@ import type { StaticImageData } from "next/image";
 import type { ReactNode } from "react";
 import tetrisScreenshot from "@/assets/images/tetris-screenshot.png";
 import wgsTechScreenshot from "@/assets/images/wgstech-screenshot.png";
-import type { TechName } from "../types/types";
+import { CreateTsConfigCode } from "@/components/molecules/create-tsconfig-code";
+import type { TechName } from "./techs";
 
-interface Project {
+export interface Project {
 	title: string;
-	image: StaticImageData;
+	aside:
+		| {
+				type: "image";
+				image: StaticImageData;
+		  }
+		| {
+				type: "code";
+				code: ReactNode;
+		  };
 	description: ReactNode;
 	tags: TechName[];
 	site?: string;
@@ -26,7 +35,7 @@ export const featuredProjects = [
 				estruturada para maximizar a conversão de visitantes em clientes.
 			</>
 		),
-		image: wgsTechScreenshot,
+		aside: { type: "image", image: wgsTechScreenshot },
 		tags: ["Next.js", "TailwindCSS", "TypeScript", "Resend"],
 		site: "https://wgstech.com.br",
 	},
@@ -41,7 +50,7 @@ export const featuredProjects = [
 				atualizações rápidas da interface e movimentação dinâmica das peças.
 			</>
 		),
-		image: tetrisScreenshot,
+		aside: { type: "image", image: tetrisScreenshot },
 		tags: ["ReactJS", "Vite", "TypeScript", "Zustand"],
 		site: "https://tetris.gurgel.io",
 		repo: "https://github.com/leogurja/tetris",
@@ -56,7 +65,11 @@ export const featuredProjects = [
 				projeto, seguindo as melhores práticas do <strong>TypeScript</strong>.
 			</>
 		),
-		image: tetrisScreenshot,
+		site: "https://npmjs.com/@gurja/create-tsconfig",
+		aside: {
+			type: "code",
+			code: <CreateTsConfigCode />,
+		},
 		tags: ["Node.js", "TypeScript", "NPM"],
 		repo: "https://github.com/leogurja/create-tsconfig",
 		className: "motion-delay-200",

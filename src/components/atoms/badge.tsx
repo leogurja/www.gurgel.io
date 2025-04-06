@@ -1,4 +1,4 @@
-import type { Tech } from "@/lib/types/types";
+import type { Tech } from "@/lib/constants/techs";
 
 export function Badge({ name, site }: Tech) {
 	return (
