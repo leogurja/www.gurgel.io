@@ -22,7 +22,7 @@ export function HamburguerMenu() {
 						type="button"
 						className="inline-flex items-center justify-center rounded-xl hover:text-emerald-500"
 					>
-						<List weight="bold" className="size-10" />
+						<List weight="bold" className="size-10" alt="menu" />
 					</button>
 				</Trigger>
 				<Portal>
@@ -52,6 +52,11 @@ export function HamburguerMenu() {
 						<Item className="data-[highlighted]:bg-emerald-600">
 							<Navlink onClick={() => setOpen(false)} href="#experience">
 								Experiência
+							</Navlink>
+						</Item>
+						<Item className="data-[highlighted]:bg-emerald-600">
+							<Navlink onClick={() => setOpen(false)} href="#experience">
+								Contato
 							</Navlink>
 						</Item>
 					</Content>

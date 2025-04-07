@@ -47,7 +47,30 @@ export const metadata = {
 		"Front-end",
 		"Back-end",
 	],
-	authors: { name: "Leonardo Gurgel", url: "https://gurgel.io" },
+	authors: { name: "Leonardo Gurgel", url: "/" },
+	alternates: {
+		canonical: "/",
+		// languages: {
+		// 	en: "/en",
+		// 	pt: "/pt",
+		// },
+	},
+	openGraph: {
+		type: "website",
+		url: "/",
+		title: "Leonardo Gurgel | Desenvolvedor Full Stack",
+		description:
+			"Veja meus projetos, experiências e habilidades com foco em React.js.",
+		locale: "pt_BR",
+		images: "https://gurgel.io/og-preview.webp",
+	},
+	twitter: {
+		title: "Leonardo Gurgel | Desenvolvedor Full Stack",
+		description:
+			"Veja meus projetos, experiências e habilidades com foco em React.js.",
+		card: "summary_large_image",
+		images: "https://gurgel.io/twitter-preview.webp",
+	},
 	creator: "Leonardo Gurgel",
 	robots: {
 		follow: true,
@@ -58,8 +81,6 @@ export const metadata = {
 export const viewport = {
 	colorScheme: "dark",
 	themeColor: "#0c0a09",
-	initialScale: 1.0,
-	width: "device-width",
 } satisfies Viewport;
 
 export default function RootLayout({
@@ -69,12 +90,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html
-			lang="pt-BR"
+			lang="pt"
 			className="w-full overflow-x-hidden scroll-smooth bg-stone-950"
 		>
 			<body
 				className={`min-h-screen w-full text-stone-100 antialiased ${inter.variable} ${firaCode.variable} font-inter`}
 			>
+				<noscript>Seu navegador não suporta JavaScript.</noscript>
 				<Navbar />
 				{children}
 				<Footer />
