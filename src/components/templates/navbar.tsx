@@ -14,6 +14,7 @@ export function Navbar() {
 				<Navlink href="#about">Sobre mim</Navlink>
 				<Navlink href="#projects">Projetos</Navlink>
 				<Navlink href="#experience">Experiência</Navlink>
+				<Navlink href="#contact">Contato</Navlink>
 			</nav>
 		</header>
 	);
