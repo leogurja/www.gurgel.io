@@ -12,7 +12,7 @@ export function AboutMeSection() {
 			</SectionTitle>
 
 			<p className="mx-auto max-w-[65ch] text-pretty px-4 text-center text-base text-stone-100 leading-relaxed sm:text-lg">
-				Apaixonado por criar experiências de usuário incríveis com React.js, sou
+				Apaixonado por criar experiências de usuário incríveis com React, sou
 				desenvolvedor front-end com foco em interfaces modernas. Nos momentos de
 				lazer, aproveito games, filmes e musculação. Acredito que a programação
 				é uma forma de arte e busco expressar minha criatividade em cada

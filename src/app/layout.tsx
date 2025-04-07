@@ -27,7 +27,7 @@ const firaCode = Fira_Code({
 export const metadata = {
 	title: "Leonardo Gurgel",
 	applicationName: "gurgel.io",
-	description: "Desenvolvedor Full Stack especializado em React.js",
+	description: "Desenvolvedor Full Stack especializado em React",
 	metadataBase: new URL("https://gurgel.io"),
 	keywords: [
 		"Leonardo",
@@ -38,6 +38,7 @@ export const metadata = {
 		"Dev",
 		"Developer",
 		"React",
+		"ReactJS",
 		"React.js",
 		"Next",
 		"Next.js",
@@ -60,14 +61,14 @@ export const metadata = {
 		url: "/",
 		title: "Leonardo Gurgel | Desenvolvedor Full Stack",
 		description:
-			"Veja meus projetos, experiências e habilidades com foco em React.js.",
+			"Veja meus projetos, experiências e habilidades com foco em React.",
 		locale: "pt_BR",
 		images: "https://gurgel.io/og-preview.webp",
 	},
 	twitter: {
 		title: "Leonardo Gurgel | Desenvolvedor Full Stack",
 		description:
-			"Veja meus projetos, experiências e habilidades com foco em React.js.",
+			"Veja meus projetos, experiências e habilidades com foco em React.",
 		card: "summary_large_image",
 		images: "https://gurgel.io/twitter-preview.webp",
 	},

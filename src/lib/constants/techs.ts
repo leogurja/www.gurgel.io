@@ -1,5 +1,5 @@
 export type TechName =
-	| "ReactJS"
+	| "React"
 	| "Next.js"
 	| "Node.js"
 	| "TailwindCSS"
@@ -16,7 +16,7 @@ export interface Tech {
 
 export const techs = [
 	{
-		name: "ReactJS",
+		name: "React",
 		site: "https://react.dev/",
 	},
 	{ name: "Next.js", site: "https://nextjs.org/" },

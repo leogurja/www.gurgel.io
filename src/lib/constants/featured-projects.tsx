@@ -44,14 +44,14 @@ export const featuredProjects = [
 		description: (
 			<>
 				Desenvolvi uma versão do clássico Tetris{" "}
-				<strong>100% com ReactJS!</strong> Com foco em alta performance e no
+				<strong>100% com React!</strong> Com foco em alta performance e no
 				gerenciamento eficiente de estados complexos. A otimização foi essencial
 				para garantir uma jogabilidade fluida, especialmente ao lidar com
 				atualizações rápidas da interface e movimentação dinâmica das peças.
 			</>
 		),
 		aside: { type: "image", image: tetrisScreenshot },
-		tags: ["ReactJS", "Vite", "TypeScript", "Zustand"],
+		tags: ["React", "Vite", "TypeScript", "Zustand"],
 		site: "https://tetris.gurgel.io",
 		repo: "https://github.com/leogurja/tetris",
 		className: "motion-delay-100",
