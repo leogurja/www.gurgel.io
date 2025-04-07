@@ -17,10 +17,10 @@ export function CallToActionSection() {
 				entre em contato.
 				<br /> Estou aberto a oportunidades e pronto pra encarar novos desafios.
 			</p>
-			<div className="mt-10 flex items-center justify-center gap-3">
+			<div className="mx-auto mt-10 flex w-fit items-center justify-center gap-3 max-sm:flex-col max-sm:items-stretch">
 				<Button
 					asChild
-					className="bg-green-600 no-underline hover:bg-whatsapp hover:text-white"
+					className="bg-green-700 no-underline hover:bg-whatsapp hover:text-white"
 				>
 					<ExternalLink href="https://wa.me/5521971237912">
 						<SiWhatsapp className="size-6" /> WhatsApp

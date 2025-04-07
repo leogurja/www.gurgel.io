@@ -37,7 +37,7 @@ export function ExperienceCard({
 					<span>O momento</span>
 				)}
 			</p>
-			<ul className="flex gap-3 py-3">
+			<ul className="flex flex-wrap items-center gap-3 py-3">
 				{tags.map((tag) => (
 					<Badge key={tag.name} {...tag} />
 				))}

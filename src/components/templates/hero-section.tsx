@@ -55,8 +55,7 @@ export function HeroSection() {
 							download="cv_leonardo_gurgel.pdf"
 							className="rounded-l-none px-4!"
 						>
-							<span className="sr-only">Baixar Currículo</span>
-							<DownloadSimple className="size-5" />
+							<DownloadSimple className="size-5" alt="Baixar Currículo" />
 						</a>
 					</Button>
 				</div>
