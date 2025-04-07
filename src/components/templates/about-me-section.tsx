@@ -1,13 +1,13 @@
 import { MotionInView } from "@/components/atoms/motion-in-view";
 import { SectionContainer } from "@/components/atoms/section-container";
 import { SectionTitle } from "@/components/molecules/section-title";
-import { experience } from "@/lib/constants/experience";
+import { experience } from "@/lib/constants/featured-techs";
 import { cn } from "@/lib/helpers/cn";
 
 export function AboutMeSection() {
 	return (
 		<SectionContainer id="about">
-			<SectionTitle number={1} className="from-emerald-500 to-cyan-400">
+			<SectionTitle number={1} className="from-blue-500 to-cyan-400">
 				Sobre Mim
 			</SectionTitle>
 

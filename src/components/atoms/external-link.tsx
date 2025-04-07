@@ -10,7 +10,7 @@ export function ExternalLink({
 			target="_blank"
 			rel="noreferrer"
 			className={cn(
-				"cursor-pointer text-stone-300 transition-colors hover:text-white",
+				"cursor-pointer text-stone-300 underline underline-offset-2 transition-colors hover:text-emerald-400",
 				className,
 			)}
 			{...rest}

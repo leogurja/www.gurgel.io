@@ -15,7 +15,7 @@ export function SectionTitle({
 		<>
 			<span
 				className={cn(
-					"mx-auto flex size-12 items-center justify-center rounded-full bg-gradient-to-r font-bold text-2xl text-white",
+					"mx-auto flex size-12 items-center justify-center rounded-full bg-linear-to-r font-bold text-2xl text-stone-950",
 					className,
 				)}
 			>

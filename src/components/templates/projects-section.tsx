@@ -6,7 +6,7 @@ import { ProjectCard } from "../organisms/project-card";
 export function ProjectsSection() {
 	return (
 		<SectionContainer id="projects">
-			<SectionTitle number={2} className="from-rose-500 to-amber-400">
+			<SectionTitle number={2} className="from-violet-500 to-fuchsia-500">
 				Projetos
 			</SectionTitle>
 			<div className="flex flex-col gap-8">

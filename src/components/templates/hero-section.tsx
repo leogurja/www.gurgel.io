@@ -33,14 +33,17 @@ export function HeroSection() {
 			</p>
 			<div className="grid grid-flow-col grid-rows-2 gap-3 md:grid-cols-[1fr_1fr] md:grid-rows-1">
 				<Button size="xl" asChild>
-					<ExternalLink href="mailto:leo@gurgel.io">
+					<ExternalLink
+						href="mailto:leo@gurgel.io"
+						className="no-underline hover:text-white"
+					>
 						Entrar em contato
 					</ExternalLink>
 				</Button>
 				<div className="flex w-full divide-x divide-stone-400/30">
 					<Button intent="secondary" size="xl" asChild>
 						<ExternalLink
-							className="flex flex-1 rounded-r-none px-8! hover:text-stone-950"
+							className="flex flex-1 rounded-r-none px-8! no-underline hover:text-stone-950"
 							href="/Leonardo Gurgel%20-%20Desenvolvedor%20Full%20Stack.pdf"
 						>
 							Currículo
@@ -60,7 +63,7 @@ export function HeroSection() {
 				<Button
 					size="icon-xl"
 					intent="secondary"
-					className="hover:bg-[oklch(51.56%_0.1632_254.73)] hover:text-white"
+					className="hover:bg-linkedin hover:text-white"
 					asChild
 				>
 					<ExternalLink href="https://linkedin.com/in/leogurja">
@@ -70,7 +73,7 @@ export function HeroSection() {
 				<Button
 					size="icon-xl"
 					intent="secondary"
-					className="hover:bg-[#181717] hover:text-white"
+					className="hover:bg-github hover:text-white"
 					asChild
 				>
 					<ExternalLink href="https://github.com/leogurja">

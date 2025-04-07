@@ -35,12 +35,13 @@ export function ProjectCard({
 				>
 					<Image
 						src={aside.image.src}
-						width={512}
-						height={512}
 						placeholder="blur"
 						blurDataURL={aside.image.blurDataURL ?? ""}
 						alt={site ?? ""}
-						className="scale-102 object-contain transition-transform group-hover:scale-105"
+						className="h-auto scale-102 object-cover transition-transform group-hover:scale-105"
+						width={640}
+						height={360}
+						quality={100}
 					/>
 				</a>
 			) : (

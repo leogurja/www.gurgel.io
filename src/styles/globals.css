@@ -13,6 +13,10 @@
 
 	--default-transition-duration: 300ms;
 
+	--color-linkedin: oklch(51.56% 0.1632 254.73);
+	--color-github: #181717;
+	--color-whatsapp: #25d366;
+
 	--animate-gradient: gradient-animation 60s linear infinite;
 }
 

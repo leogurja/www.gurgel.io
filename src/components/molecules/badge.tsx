@@ -1,10 +1,17 @@
-import type { Tech } from "@/lib/constants/techs";
 import { ExternalLink } from "../atoms/external-link";
 
-export function Badge({ name, site }: Tech) {
+interface BadgeProps {
+	name: string;
+	site: string;
+}
+
+export function Badge({ name, site }: BadgeProps) {
 	return (
 		<li>
-			<ExternalLink href={site} className="rounded-full px-2 py-1 text-xs">
+			<ExternalLink
+				href={site}
+				className="rounded-full bg-stone-800 px-3 py-1 font-medium text-xs leading-5 no-underline hover:bg-emerald-700 hover:text-white"
+			>
 				{name}
 			</ExternalLink>
 		</li>
