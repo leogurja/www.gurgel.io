@@ -2,9 +2,10 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Navbar } from "@/components/organisms/navbar";
+import { Navbar } from "@/components/templates/navbar";
 import "@/styles/globals.css";
 import { Fira_Code, Inter } from "next/font/google";
+import { Footer } from "@/components/templates/footer";
 
 const inter = Inter({
 	subsets: ["latin", "latin-ext"],
@@ -71,18 +72,12 @@ export default function RootLayout({
 			lang="pt-BR"
 			className="w-full overflow-x-hidden scroll-smooth bg-stone-950"
 		>
-			<head>
-				<link
-					rel="preconnect"
-					href="https://fonts.gstatic.com"
-					crossOrigin="anonymous"
-				/>
-			</head>
 			<body
 				className={`min-h-screen w-full text-stone-100 antialiased ${inter.variable} ${firaCode.variable} font-inter`}
 			>
 				<Navbar />
 				{children}
+				<Footer />
 				<Analytics />
 				<SpeedInsights />
 			</body>

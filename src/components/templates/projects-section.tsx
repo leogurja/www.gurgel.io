@@ -1,7 +1,7 @@
 import { featuredProjects } from "@/lib/constants/featured-projects";
 import { SectionContainer } from "../atoms/section-container";
-import { ProjectCard } from "../molecules/project-card";
 import { SectionTitle } from "../molecules/section-title";
+import { ProjectCard } from "../organisms/project-card";
 
 export function ProjectsSection() {
 	return (

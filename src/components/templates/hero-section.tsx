@@ -5,6 +5,7 @@ import avatarImage from "@/assets/images/foto_perfil.png";
 import { Button } from "@/components/atoms/button";
 import { GradientText } from "@/components/atoms/gradient-text";
 import { LinkedInLogo } from "@/components/atoms/linkedin-logo.svg";
+import { ExternalLink } from "../atoms/external-link";
 
 export function HeroSection() {
 	return (
@@ -32,20 +33,18 @@ export function HeroSection() {
 			</p>
 			<div className="grid grid-flow-col grid-rows-2 gap-3 md:grid-cols-[1fr_1fr] md:grid-rows-1">
 				<Button size="xl" asChild>
-					<a href="mailto:leo@gurgel.io" target="_blank" rel="noreferrer">
+					<ExternalLink href="mailto:leo@gurgel.io">
 						Entrar em contato
-					</a>
+					</ExternalLink>
 				</Button>
 				<div className="flex w-full divide-x divide-stone-400/30">
 					<Button intent="secondary" size="xl" asChild>
-						<a
-							className="flex flex-1 rounded-r-none px-8!"
+						<ExternalLink
+							className="flex flex-1 rounded-r-none px-8! hover:text-stone-950"
 							href="/Leonardo Gurgel%20-%20Desenvolvedor%20Full%20Stack.pdf"
-							target="_blank"
-							rel="noreferrer"
 						>
 							Currículo
-						</a>
+						</ExternalLink>
 					</Button>
 					<Button intent="secondary" size="xl" asChild>
 						<a
@@ -64,13 +63,9 @@ export function HeroSection() {
 					className="hover:bg-[oklch(51.56%_0.1632_254.73)] hover:text-white"
 					asChild
 				>
-					<a
-						href="https://linkedin.com/in/leogurja"
-						target="_blank"
-						rel="noreferrer"
-					>
+					<ExternalLink href="https://linkedin.com/in/leogurja">
 						<LinkedInLogo />
-					</a>
+					</ExternalLink>
 				</Button>
 				<Button
 					size="icon-xl"
@@ -78,13 +73,9 @@ export function HeroSection() {
 					className="hover:bg-[#181717] hover:text-white"
 					asChild
 				>
-					<a
-						href="https://github.com/leogurja"
-						target="_blank"
-						rel="noreferrer"
-					>
+					<ExternalLink href="https://github.com/leogurja">
 						<SiGithub className="size-4" />
-					</a>
+					</ExternalLink>
 				</Button>
 			</div>
 		</section>

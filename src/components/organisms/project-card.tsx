@@ -4,9 +4,9 @@ import Image from "next/image";
 import type { Project } from "@/lib/constants/featured-projects";
 import { techs } from "@/lib/constants/techs";
 import { cn } from "@/lib/helpers/cn";
-import { Badge } from "../atoms/badge";
 import { Button } from "../atoms/button";
 import { MotionInView } from "../atoms/motion-in-view";
+import { Badge } from "../molecules/badge";
 
 export function ProjectCard({
 	title,
