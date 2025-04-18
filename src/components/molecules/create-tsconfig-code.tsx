@@ -7,7 +7,7 @@ import { InquirerQuestion } from "../atoms/inquirer-question";
 const codeFrames = [
 	null,
 	<>
-		<p>
+		<p className="flex gap-x-2">
 			<span className="text-blue-500">?</span>
 			<strong>Select a framework</strong>
 			<span className="text-stone-200">(Use arrow keys)</span>
@@ -73,10 +73,10 @@ export function CreateTsConfigCode() {
 
 	return (
 		<code
-			className="flex size-full h-40 flex-col gap-1 overflow-hidden rounded-2xl bg-stone-800 p-6 font-fira-code text-sm transition-transform *:flex *:flex-wrap *:gap-x-2 group-hover:scale-102 md:h-auto md:w-1/3"
+			className="flex size-full h-40 flex-col gap-1 overflow-hidden rounded-2xl bg-stone-800 p-6 font-fira-code text-xs transition-transform group-hover:scale-102 md:h-auto md:w-1/3 md:text-sm"
 			ref={ref}
 		>
-			<p>
+			<p className="flex flex-nowrap gap-x-2">
 				<span className="text-green-500">$</span>
 				<span className="text-blue-500">npm</span>
 				<span className="text-cyan-500">create</span>

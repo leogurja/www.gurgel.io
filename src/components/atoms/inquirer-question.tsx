@@ -12,13 +12,13 @@ export function InquirerQuestion({
 	current = false,
 }: InquirerQuestionProps) {
 	return (
-		<p>
+		<p className="flex gap-x-2">
 			{current ? (
 				<span className="text-blue-500">?</span>
 			) : (
 				<span className="text-green-500">✔</span>
 			)}
-			<strong className="text-nowrap">{question}</strong>
+			<strong>{question}</strong>
 			<span
 				className={cn({ "text-stone-200": current, "text-cyan-500": !current })}
 			>
