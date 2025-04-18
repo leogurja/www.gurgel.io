@@ -71,6 +71,7 @@ export const metadata = {
 			"Veja meus projetos, experiências e habilidades com foco em React.",
 		card: "summary_large_image",
 		images: "https://gurgel.io/twitter-preview.webp",
+		site: "https://gurgel.io",
 	},
 	creator: "Leonardo Gurgel",
 	robots: {
