@@ -1,5 +1,5 @@
-import process from "node:process";
 import type { NextConfig } from "next";
+import process from "node:process";
 
 const cspHeader = `
   default-src 'self';
@@ -12,22 +12,22 @@ const cspHeader = `
 `;
 
 const nextConfig: NextConfig = {
-	output: "standalone",
-	headers() {
-		return new Promise((resolve) =>
-			resolve([
-				{
-					source: "/(.*)",
-					headers: [
-						{
-							key: "Content-Security-Policy",
-							value: cspHeader.replace(/\n/g, ""),
-						},
-					],
-				},
-			]),
-		);
-	},
+  output: "standalone",
+  headers() {
+    return new Promise((resolve) =>
+      resolve([
+        {
+          source: "/(.*)",
+          headers: [
+            {
+              key: "Content-Security-Policy",
+              value: cspHeader.replace(/\n/g, ""),
+            },
+          ],
+        },
+      ]),
+    );
+  },
 };
 
 export default nextConfig;

@@ -1,42 +1,25 @@
-export type TechName =
-	| "React"
-	| "Next.js"
-	| "Node.js"
-	| "TailwindCSS"
-	| "TypeScript"
-	| "Resend"
-	| "Vite"
-	| "Zustand"
-	| "NPM";
+export const techSites = {
+  Rails: "https://rubyonrails.org/",
+  Java: "https://www.java.com/",
+  Spring: "https://spring.io/",
+  JavaScript: "https://developer.mozilla.org/docs/Web/JavaScript",
+  MySQL: "https://mysql.com/",
+  Oracle: "https://oracle.com/database/",
+  RabbitMQ: "https://rabbitmq.com/",
+  "Node.js": "https://nodejs.org/",
+  Docker: "https://docker.com/",
+  Redis: "https://redis.io/",
+  CSS: "https://developer.mozilla.org/docs/Web/CSS",
+  React: "https://react.dev/",
+  "Next.js": "https://nextjs.org/",
+  TailwindCSS: "https://tailwindcss.com/",
+  TypeScript: "https://typescriptlang.org/",
+  Resend: "https://resend.com/home",
+  Vite: "https://vite.dev/",
+  Zustand: "https://zustand-demo.pmnd.rs/",
+  NPM: "https://npmjs.com",
+  Ruby: "https://ruby-lang.org/",
+  Webpack: "https://webpack.js.org/",
+};
 
-export interface Tech {
-	name: TechName;
-	site: string;
-}
-
-export const techs = [
-	{
-		name: "React",
-		site: "https://react.dev/",
-	},
-	{ name: "Next.js", site: "https://nextjs.org/" },
-	{ name: "Node.js", site: "https://nodejs.org/" },
-	{
-		name: "TailwindCSS",
-		site: "https://tailwindcss.com/",
-	},
-	{
-		name: "TypeScript",
-		site: "https://typescriptlang.org/",
-	},
-	{ name: "Resend", site: "https://resend.com/home" },
-	{ name: "Vite", site: "https://vite.dev/" },
-	{
-		name: "Zustand",
-		site: "https://zustand-demo.pmnd.rs/",
-	},
-	{
-		name: "NPM",
-		site: "https://npmjs.com",
-	},
-] satisfies Tech[];
+export type TechName = keyof typeof techSites;

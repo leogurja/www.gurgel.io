@@ -1,29 +1,29 @@
-import type { ComponentProps } from "react";
 import { GradientText } from "@/components/atoms/gradient-text";
-import { cn } from "@/lib/helpers/cn";
+import type { ComponentProps } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface SectionTitleProps extends ComponentProps<typeof GradientText> {
-	number: number;
+  number: number;
 }
 
 export function SectionTitle({
-	number,
-	className,
-	...rest
+  number,
+  className,
+  ...rest
 }: SectionTitleProps) {
-	return (
-		<>
-			<span
-				className={cn(
-					"mx-auto flex size-12 items-center justify-center rounded-full bg-linear-to-r font-bold text-2xl text-stone-950",
-					className,
-				)}
-			>
-				{number}
-			</span>
-			<h2 className="my-12 text-center font-bold text-6xl tracking-tight">
-				<GradientText className={className} {...rest} />
-			</h2>
-		</>
-	);
+  return (
+    <>
+      <span
+        className={twMerge(
+          "mx-auto flex size-12 items-center justify-center rounded-full bg-linear-to-r text-2xl font-bold text-stone-950",
+          className,
+        )}
+      >
+        {number}
+      </span>
+      <h2 className="my-12 text-center text-6xl font-bold tracking-tight">
+        <GradientText className={className} {...rest} />
+      </h2>
+    </>
+  );
 }
