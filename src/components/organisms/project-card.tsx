@@ -1,19 +1,16 @@
 import type { Project } from "@/lib/constants/featured-projects";
-import { SiGithub } from "@icons-pack/react-simple-icons";
-import { ArrowSquareOut } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
-import { Button } from "../atoms/button";
 import { MotionInView } from "../atoms/motion-in-view";
 import { Badge } from "../molecules/badge";
+import { ProjectLink } from "../molecules/project-link";
 
 export function ProjectCard({
   title,
-  site,
+  links,
   aside,
   description,
   tags,
-  repo,
   className,
 }: Project) {
   return (
@@ -27,7 +24,7 @@ export function ProjectCard({
     >
       {aside.type === "image" ? (
         <a
-          href={site ?? "#"}
+          href={Object.values(links)[0] ?? "#"}
           target="_blank"
           rel="noreferrer"
           className="h-40 overflow-hidden rounded-2xl transition-transform group-hover:scale-102 md:h-auto md:w-1/3"
@@ -36,7 +33,7 @@ export function ProjectCard({
             src={aside.image.src}
             placeholder="blur"
             blurDataURL={aside.image.blurDataURL ?? ""}
-            alt={site ?? ""}
+            alt=""
             className="h-auto scale-102 object-cover transition-transform group-hover:scale-105"
             width={640}
             height={360}
@@ -55,30 +52,9 @@ export function ProjectCard({
           ))}
         </ul>
         <footer className="flex gap-4">
-          {repo && (
-            <Button asChild intent="link">
-              <a
-                href={repo}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center"
-              >
-                <SiGithub className="size-6" /> <span>Github</span>
-              </a>
-            </Button>
-          )}
-          {site && (
-            <Button asChild intent="link">
-              <a
-                href={site}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center"
-              >
-                <ArrowSquareOut className="size-6" /> Site
-              </a>
-            </Button>
-          )}
+          {Object.entries(links).map(([name, url]) => (
+            <ProjectLink key={name} name={name} url={url} />
+          ))}
         </footer>
       </div>
     </MotionInView>

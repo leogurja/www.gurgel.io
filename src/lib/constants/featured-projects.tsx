@@ -1,6 +1,7 @@
 import tetrisScreenshot from "@/assets/images/tetris-screenshot.png";
 import wgsTechScreenshot from "@/assets/images/wgstech-screenshot.png";
 import { CreateTsConfigCode } from "@/components/molecules/create-tsconfig-code";
+import { EslintConfigCode } from "@/components/molecules/eslint-config-code";
 import type { StaticImageData } from "next/image";
 import type { ReactNode } from "react";
 import type { TechName } from "./techs";
@@ -18,12 +19,11 @@ export interface Project {
       };
   description: ReactNode;
   tags: TechName[];
-  site?: string;
-  repo?: string;
+  links: Record<string, string | null>;
   className?: string;
 }
 
-export const featuredProjects = [
+export const featuredProjects: Project[] = [
   {
     title: "WGS Tech",
     description: (
@@ -37,7 +37,9 @@ export const featuredProjects = [
     ),
     aside: { type: "image", image: wgsTechScreenshot },
     tags: ["Next.js", "TailwindCSS", "TypeScript", "Resend"],
-    site: "https://wgstech.com.br",
+    links: {
+      "Em breve": null,
+    },
   },
   {
     title: "Tetris",
@@ -52,8 +54,10 @@ export const featuredProjects = [
     ),
     aside: { type: "image", image: tetrisScreenshot },
     tags: ["React", "Vite", "TypeScript", "Zustand"],
-    site: "https://tetris.gurgel.io",
-    repo: "https://github.com/leogurja/tetris",
+    links: {
+      Site: "https://tetris.gurgel.io",
+      Github: "https://github.com/leogurja/tetris",
+    },
     className: "motion-delay-100",
   },
   {
@@ -65,13 +69,36 @@ export const featuredProjects = [
         projeto, seguindo as melhores práticas do <strong>TypeScript</strong>.
       </>
     ),
-    site: "https://npmjs.com/@gurja/create-tsconfig",
+    links: {
+      Github: "https://github.com/leogurja/create-tsconfig",
+      NPM: "https://npmjs.com/@gurja/create-tsconfig",
+    },
     aside: {
       type: "code",
       code: <CreateTsConfigCode />,
     },
     tags: ["Node.js", "TypeScript", "NPM"],
-    repo: "https://github.com/leogurja/create-tsconfig",
     className: "motion-delay-200",
   },
-] satisfies Project[];
+  {
+    title: "ESLint Config",
+    description: (
+      <>
+        Uma configuração opinada do <strong>ESLint</strong> para projetos em{" "}
+        <strong>TypeScript</strong>, pronta para uso em diferentes frameworks e
+        ambientes. Inclui plugins úteis já pré-configurados, eliminando a dor de
+        cabeça de decidir cada regra e padronizando o código desde o início.
+      </>
+    ),
+    aside: {
+      type: "code",
+      code: <EslintConfigCode />,
+    },
+    tags: ["ESLint", "TypeScript", "NPM"],
+    links: {
+      Github: "https://github.com/leogurja/eslint-config",
+      NPM: "https://npmjs.com/@gurja/eslint-config",
+    },
+    className: "motion-delay-300",
+  },
+];

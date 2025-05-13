@@ -20,6 +20,7 @@ export const techSites = {
   NPM: "https://npmjs.com",
   Ruby: "https://ruby-lang.org/",
   Webpack: "https://webpack.js.org/",
+  ESLint: "https://eslint.org/",
 };
 
 export type TechName = keyof typeof techSites;

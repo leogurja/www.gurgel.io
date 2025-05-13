@@ -71,7 +71,7 @@ export function CreateTsConfigCode() {
 
   return (
     <code
-      className="font-fira-code flex size-full h-40 flex-col gap-1 overflow-hidden rounded-2xl bg-stone-800 p-6 text-xs transition-transform group-hover:scale-102 md:h-auto md:w-1/3 md:text-sm"
+      className="font-fira-code flex size-full h-40 flex-col gap-1 overflow-hidden rounded-2xl bg-[rgb(43,43,43)] p-6 text-xs transition-transform group-hover:scale-102 md:h-auto md:w-1/3 md:text-sm"
       ref={ref}
     >
       <p className="flex flex-nowrap gap-x-2">
