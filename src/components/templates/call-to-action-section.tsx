@@ -20,26 +20,31 @@ export function CallToActionSection() {
       <div className="mx-auto mt-10 flex w-fit items-center justify-center gap-3 max-sm:flex-col max-sm:items-stretch">
         <Button
           asChild
-          className="hover:bg-whatsapp bg-green-700 no-underline hover:text-white"
+          className="hover:bg-whatsapp bg-green-700 hover:text-white"
         >
-          <ExternalLink href="https://wa.me/5521971237912">
+          <ExternalLink
+            href="https://wa.me/5521971237912"
+            className="no-underline"
+          >
             <SiWhatsapp className="size-6" /> WhatsApp
           </ExternalLink>
         </Button>
         <Button
           asChild
-          className="bg-linkedin no-underline hover:bg-blue-500 hover:text-white"
+          className="bg-linkedin hover:bg-blue-500 hover:text-white"
         >
-          <ExternalLink href="https://linkedin.com/in/leogurja">
+          <ExternalLink
+            href="https://linkedin.com/in/leogurja"
+            className="no-underline"
+          >
             <LinkedInLogo className="size-6" /> LinkedIn
           </ExternalLink>
         </Button>
-        <Button
-          asChild
-          intent="secondary"
-          className="no-underline hover:text-black"
-        >
-          <ExternalLink href="mailto:leo@gurgel.io">
+        <Button asChild intent="secondary">
+          <ExternalLink
+            href="mailto:leo@gurgel.io"
+            className="no-underline hover:text-black"
+          >
             <EnvelopeSimple className="size-6" /> Email
           </ExternalLink>
         </Button>
