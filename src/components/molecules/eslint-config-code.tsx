@@ -2,10 +2,11 @@ import dedent from "dedent";
 import { SyntaxHighlighter } from "../atoms/syntax-highlighter";
 
 const code = dedent`
-  import { config, configs } from "@gurja/eslint-config";
+  import config from "@gurja/eslint-config";
+  import react from "@gurja/eslint-config/react";
 
   export default config(
-    configs.react({ vite: true }),
+    react({ vite: true }),
     // any other ESLint config you'd want to add as well
   );
 `;

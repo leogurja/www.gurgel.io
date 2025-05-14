@@ -33,7 +33,7 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@gurja/eslint-config": "^4.0.0",
+    "@gurja/eslint-config": "^5.0.0",
     "@tailwindcss/postcss": "^4.0.17",
     "@types/node": "^22.13.13",
     "@types/react": "^19.0.12",
