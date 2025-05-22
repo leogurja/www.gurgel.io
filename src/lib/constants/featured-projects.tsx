@@ -38,7 +38,7 @@ export const featuredProjects: Project[] = [
     aside: { type: "image", image: wgsTechScreenshot },
     tags: ["Next.js", "TailwindCSS", "TypeScript", "Resend"],
     links: {
-      "Em breve": null,
+      Site: "https://wgstech.com.br",
     },
   },
   {
