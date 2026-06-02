@@ -1,16 +1,13 @@
-import { GradientText } from "@/components/atoms/gradient-text";
 import type { ComponentProps } from "react";
 import { twMerge } from "tailwind-merge";
+
+import { GradientText } from "@/components/atoms/gradient-text";
 
 interface SectionTitleProps extends ComponentProps<typeof GradientText> {
   number: number;
 }
 
-export function SectionTitle({
-  number,
-  className,
-  ...rest
-}: SectionTitleProps) {
+export function SectionTitle({ number, className, ...rest }: SectionTitleProps) {
   return (
     <>
       <span

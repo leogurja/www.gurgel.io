@@ -1,7 +1,9 @@
 "use client";
 
-import { useIntersectionOnce } from "@/lib/hooks/useIntersectionOnce";
 import { useEffect, useState } from "react";
+
+import { useIntersectionOnce } from "@/lib/hooks/useIntersectionOnce";
+
 import { InquirerQuestion } from "../atoms/inquirer-question";
 
 const codeFrames = [
@@ -32,10 +34,7 @@ const codeFrames = [
   <>
     <InquirerQuestion question="Select a framework" answer="React" />
     <InquirerQuestion question="Is this a library?" answer="Yes" />
-    <InquirerQuestion
-      question="Is this library being used inside a monorepo?"
-      answer="Yes"
-    />
+    <InquirerQuestion question="Is this library being used inside a monorepo?" answer="Yes" />
     <InquirerQuestion
       question="Choose a filename for the config"
       answer="(tsconfig.json)"
@@ -45,14 +44,8 @@ const codeFrames = [
   <>
     <InquirerQuestion question="Select a framework" answer="React" />
     <InquirerQuestion question="Is this a library?" answer="Yes" />
-    <InquirerQuestion
-      question="Is this library being used inside a monorepo?"
-      answer="Yes"
-    />
-    <InquirerQuestion
-      question="Choose a filename for the config"
-      answer="tsconfig.json"
-    />
+    <InquirerQuestion question="Is this library being used inside a monorepo?" answer="Yes" />
+    <InquirerQuestion question="Choose a filename for the config" answer="tsconfig.json" />
   </>,
 ];
 

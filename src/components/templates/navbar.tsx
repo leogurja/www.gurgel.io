@@ -1,5 +1,7 @@
-import { Logo } from "@/components/atoms/logo.svg";
 import Link from "next/link";
+
+import { Logo } from "@/components/atoms/logo.svg";
+
 import { Navlink } from "../atoms/navlink";
 import { HamburguerMenu } from "../molecules/hamburger-menu";
 

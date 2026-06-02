@@ -19,7 +19,5 @@ export function GradientText({
   animated,
   ...rest
 }: ComponentProps<"span"> & VariantProps<typeof gradientVariants>) {
-  return (
-    <span className={gradientVariants({ animated, className })} {...rest} />
-  );
+  return <span className={gradientVariants({ animated, className })} {...rest} />;
 }

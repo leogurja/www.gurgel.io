@@ -1,11 +1,13 @@
-import { Footer } from "@/components/templates/footer";
-import { Navbar } from "@/components/templates/navbar";
-import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+
+import "@/styles/globals.css";
 import type { Metadata, Viewport } from "next";
 import { Fira_Code, Inter } from "next/font/google";
 import type { ReactNode } from "react";
+
+import { Footer } from "@/components/templates/footer";
+import { Navbar } from "@/components/templates/navbar";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
@@ -60,15 +62,13 @@ export const metadata = {
     type: "website",
     url: "/",
     title: "Leonardo Gurgel | Desenvolvedor Full Stack",
-    description:
-      "Veja meus projetos, experiências e habilidades com foco em React.",
+    description: "Veja meus projetos, experiências e habilidades com foco em React.",
     locale: "pt_BR",
     images: "https://gurgel.io/og-preview.webp",
   },
   twitter: {
     title: "Leonardo Gurgel | Desenvolvedor Full Stack",
-    description:
-      "Veja meus projetos, experiências e habilidades com foco em React.",
+    description: "Veja meus projetos, experiências e habilidades com foco em React.",
     card: "summary_large_image",
     images: "https://gurgel.io/twitter-preview.webp",
     site: "https://gurgel.io",
@@ -91,10 +91,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html
-      lang="pt"
-      className="w-full overflow-x-hidden scroll-smooth bg-stone-950"
-    >
+    <html lang="pt" className="w-full overflow-x-hidden scroll-smooth bg-stone-950">
       <body
         className={`min-h-screen w-full text-stone-100 antialiased ${inter.variable} ${firaCode.variable} font-inter`}
       >

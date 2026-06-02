@@ -1,17 +1,12 @@
-import type { Experience } from "@/lib/constants/experience";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
+
+import type { Experience } from "@/lib/constants/experience";
+
 import { ExternalLink } from "../atoms/external-link";
 import { Badge } from "./badge";
 
-export function ExperienceCard({
-  role,
-  site,
-  company,
-  tags,
-  period,
-  description,
-}: Experience) {
+export function ExperienceCard({ role, site, company, tags, period, description }: Experience) {
   return (
     <article className="mb-10">
       <div className="absolute left-0 -ml-2 size-4 rounded-full border-2 border-stone-950 bg-emerald-500" />
@@ -42,9 +37,7 @@ export function ExperienceCard({
           <Badge key={tag} name={tag} />
         ))}
       </ul>
-      <p className="leading-relaxed text-pretty text-stone-300">
-        {description}
-      </p>
+      <p className="leading-relaxed text-pretty text-stone-300">{description}</p>
     </article>
   );
 }

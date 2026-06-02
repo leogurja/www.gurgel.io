@@ -5,7 +5,6 @@ export function Logo(props: ComponentProps<"svg">) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 13 60 36"
-      role="img"
       data-asc="0.968"
       fill="currentColor"
       width="1rem"

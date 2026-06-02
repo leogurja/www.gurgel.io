@@ -1,4 +1,5 @@
 import dedent from "dedent";
+
 import type { TechName } from "./techs";
 
 export interface Experience {

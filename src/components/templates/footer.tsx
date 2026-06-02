@@ -1,5 +1,7 @@
 import { SiGithub } from "@icons-pack/react-simple-icons";
+
 import { ExternalLink } from "../atoms/external-link";
+import { FooterCopyright } from "../atoms/footer-copyright";
 import { LinkedInLogo } from "../atoms/linkedin-logo.svg";
 
 export function Footer() {
@@ -14,12 +16,7 @@ export function Footer() {
             <SiGithub className="size-6" title="GitHub" />
           </ExternalLink>
         </div>
-        <p className="text-center text-sm/6 text-stone-400 max-md:mt-8 md:order-first">
-          <ExternalLink href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-            CC BY-NC-SA 4.0
-          </ExternalLink>{" "}
-          {new Date().getFullYear()} © Leonardo Gurgel
-        </p>
+        <FooterCopyright />
       </div>
     </footer>
   );

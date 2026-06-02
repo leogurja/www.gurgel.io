@@ -1,4 +1,5 @@
 import { techSites, type TechName } from "@/lib/constants/techs";
+
 import { ExternalLink } from "../atoms/external-link";
 
 interface BadgeProps {

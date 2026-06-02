@@ -1,4 +1,5 @@
 import { featuredProjects } from "@/lib/constants/featured-projects";
+
 import { SectionContainer } from "../atoms/section-container";
 import { SectionTitle } from "../molecules/section-title";
 import { ProjectCard } from "../organisms/project-card";

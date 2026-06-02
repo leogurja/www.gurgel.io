@@ -1,13 +1,9 @@
 "use client";
 
-import { useIntersectionOnce } from "@/lib/hooks/useIntersectionOnce";
-import type {
-  ComponentPropsWithoutRef,
-  ElementType,
-  PropsWithChildren,
-} from "react";
-import type { ClassNameValue } from "tailwind-merge";
+import type { ComponentPropsWithoutRef, ElementType, PropsWithChildren } from "react";
 import { tv } from "tailwind-variants";
+
+import { useIntersectionOnce } from "@/lib/hooks/useIntersectionOnce";
 
 type PolymorphicProps<E extends ElementType> = PropsWithChildren<
   ComponentPropsWithoutRef<E> & { as?: E }
@@ -15,7 +11,7 @@ type PolymorphicProps<E extends ElementType> = PropsWithChildren<
 
 type MotionInViewProps<T extends ElementType> = PolymorphicProps<T> & {
   threshold?: number;
-  className?: ClassNameValue;
+  className?: string;
 };
 
 const motionInViewVariants = tv({
@@ -39,10 +35,6 @@ export function MotionInView<T extends ElementType = "div">({
   const Component = (as ?? "div") satisfies ElementType;
 
   return (
-    <Component
-      ref={ref}
-      className={motionInViewVariants({ className, didIntersect })}
-      {...rest}
-    />
+    <Component ref={ref} className={motionInViewVariants({ className, didIntersect })} {...rest} />
   );
 }

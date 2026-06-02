@@ -4,11 +4,7 @@ interface InquirerQuestionProps {
   current?: boolean;
 }
 
-export function InquirerQuestion({
-  question,
-  answer,
-  current = false,
-}: InquirerQuestionProps) {
+export function InquirerQuestion({ question, answer, current = false }: InquirerQuestionProps) {
   return (
     <p className="flex gap-x-2">
       {current ? (
@@ -17,9 +13,7 @@ export function InquirerQuestion({
         <span className="text-green-500">✔</span>
       )}
       <strong>{question}</strong>
-      <span className={current ? "text-stone-200" : "text-cyan-500"}>
-        {answer}
-      </span>
+      <span className={current ? "text-stone-200" : "text-cyan-500"}>{answer}</span>
     </p>
   );
 }

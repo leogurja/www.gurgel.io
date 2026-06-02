@@ -1,9 +1,11 @@
+import type { StaticImageData } from "next/image";
+import type { ReactNode } from "react";
+
 import tetrisScreenshot from "@/assets/images/tetris-screenshot.png";
 import wgsTechScreenshot from "@/assets/images/wgstech-screenshot.png";
 import { CreateTsConfigCode } from "@/components/molecules/create-tsconfig-code";
 import { EslintConfigCode } from "@/components/molecules/eslint-config-code";
-import type { StaticImageData } from "next/image";
-import type { ReactNode } from "react";
+
 import type { TechName } from "./techs";
 
 export interface Project {
@@ -28,10 +30,9 @@ export const featuredProjects: Project[] = [
     title: "WGS Tech",
     description: (
       <>
-        Uma landing page moderna e responsiva para a WGS Tech, uma empresa de
-        suporte de TI. O projeto foi otimizado para SEO, garantindo melhor
-        posicionamento nos motores de busca e aumentando a visibilidade da
-        empresa. Além de destacar os serviços oferecidos, a página foi
+        Uma landing page moderna e responsiva para a WGS Tech, uma empresa de suporte de TI. O
+        projeto foi otimizado para SEO, garantindo melhor posicionamento nos motores de busca e
+        aumentando a visibilidade da empresa. Além de destacar os serviços oferecidos, a página foi
         estruturada para maximizar a conversão de visitantes em clientes.
       </>
     ),
@@ -45,11 +46,10 @@ export const featuredProjects: Project[] = [
     title: "Tetris",
     description: (
       <>
-        Desenvolvi uma versão do clássico Tetris{" "}
-        <strong>100% com React!</strong> Com foco em alta performance e no
-        gerenciamento eficiente de estados complexos. A otimização foi essencial
-        para garantir uma jogabilidade fluida, especialmente ao lidar com
-        atualizações rápidas da interface e movimentação dinâmica das peças.
+        Desenvolvi uma versão do clássico Tetris <strong>100% com React!</strong> Com foco em alta
+        performance e no gerenciamento eficiente de estados complexos. A otimização foi essencial
+        para garantir uma jogabilidade fluida, especialmente ao lidar com atualizações rápidas da
+        interface e movimentação dinâmica das peças.
       </>
     ),
     aside: { type: "image", image: tetrisScreenshot },
@@ -65,8 +65,8 @@ export const featuredProjects: Project[] = [
     description: (
       <>
         Nunca mais se preocupe com <strong>tsconfig.json</strong>!<br />
-        Responda a poucas perguntas e tenha a configuração ideal para seu
-        projeto, seguindo as melhores práticas do <strong>TypeScript</strong>.
+        Responda a poucas perguntas e tenha a configuração ideal para seu projeto, seguindo as
+        melhores práticas do <strong>TypeScript</strong>.
       </>
     ),
     links: {
@@ -85,9 +85,9 @@ export const featuredProjects: Project[] = [
     description: (
       <>
         Uma configuração opinada do <strong>ESLint</strong> para projetos em{" "}
-        <strong>TypeScript</strong>, pronta para uso em diferentes frameworks e
-        ambientes. Inclui plugins úteis já pré-configurados, eliminando a dor de
-        cabeça de decidir cada regra e padronizando o código desde o início.
+        <strong>TypeScript</strong>, pronta para uso em diferentes frameworks e ambientes. Inclui
+        plugins úteis já pré-configurados, eliminando a dor de cabeça de decidir cada regra e
+        padronizando o código desde o início.
       </>
     ),
     aside: {

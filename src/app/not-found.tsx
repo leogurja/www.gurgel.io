@@ -1,6 +1,8 @@
-import { Button } from "@/components/atoms/button";
-import "@/styles/globals.css";
 import Link from "next/link";
+
+import { Button } from "@/components/atoms/button";
+
+import "@/styles/globals.css";
 
 export default function NotFound() {
   return (
@@ -13,8 +15,8 @@ export default function NotFound() {
         <p className="mt-6 text-lg font-medium text-pretty text-stone-500 sm:text-xl/8">
           Desculpe, não encontramos o que você procura.
         </p>
-        <Button asChild size="xl" className="mt-10">
-          <Link href="/">Voltar ao início</Link>
+        <Button nativeButton={false} render={<Link href="/" />} size="xl" className="mt-10">
+          Voltar ao início
         </Button>
       </div>
     </main>

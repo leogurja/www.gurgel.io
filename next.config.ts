@@ -1,5 +1,6 @@
-import type { NextConfig } from "next";
 import process from "node:process";
+
+import type { NextConfig } from "next";
 
 const cspHeader = `
   default-src 'self';
@@ -12,21 +13,32 @@ const cspHeader = `
 `;
 
 const nextConfig: NextConfig = {
-  output: "standalone",
-  headers() {
-    return new Promise((resolve) =>
-      resolve([
-        {
-          source: "/(.*)",
-          headers: [
-            {
-              key: "Content-Security-Policy",
-              value: cspHeader.replace(/\n/g, ""),
-            },
-          ],
-        },
-      ]),
-    );
+  bundlePagesRouterDependencies: false,
+  cacheComponents: true,
+  reactCompiler: true,
+  typedRoutes: true,
+  images: {
+    qualities: [100, 75],
+  },
+  cacheLife: {
+    footer: {
+      stale: 2592000,
+      revalidate: 2592000,
+      expire: 2592000,
+    },
+  },
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: cspHeader.replace(/\n/g, ""),
+          },
+        ],
+      },
+    ];
   },
 };
 

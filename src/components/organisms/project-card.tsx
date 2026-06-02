@@ -1,18 +1,13 @@
-import type { Project } from "@/lib/constants/featured-projects";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
+
+import type { Project } from "@/lib/constants/featured-projects";
+
 import { MotionInView } from "../atoms/motion-in-view";
 import { Badge } from "../molecules/badge";
 import { ProjectLink } from "../molecules/project-link";
 
-export function ProjectCard({
-  title,
-  links,
-  aside,
-  description,
-  tags,
-  className,
-}: Project) {
+export function ProjectCard({ title, links, aside, description, tags, className }: Project) {
   return (
     <MotionInView
       className={twMerge(

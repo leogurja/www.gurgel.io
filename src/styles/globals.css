@@ -2,7 +2,7 @@
 @import "tailwindcss";
 @plugin "tailwindcss-motion";
 
-@plugin 'tailwind-scrollbar' {
+@plugin "tailwind-scrollbar" {
   nocompatible: true;
   preferredstrategy: "pseudoelements";
 }

@@ -1,4 +1,5 @@
 import dedent from "dedent";
+
 import { SyntaxHighlighter } from "../atoms/syntax-highlighter";
 
 const code = dedent`
