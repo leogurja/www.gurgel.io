@@ -1,21 +1,8 @@
 import type { ComponentProps } from "react";
-import { twMerge } from "tailwind-merge";
 
-export function ExternalLink({
-  className,
-  children,
-  ...rest
-}: Omit<ComponentProps<"a">, "target" | "rel">) {
+export function ExternalLink({ children, ...rest }: Omit<ComponentProps<"a">, "target" | "rel">) {
   return (
-    <a
-      target="_blank"
-      rel="noreferrer"
-      className={twMerge(
-        "cursor-pointer text-stone-300 transition-colors hover:text-emerald-400",
-        className,
-      )}
-      {...rest}
-    >
+    <a target="_blank" rel="noreferrer" {...rest}>
       {children}
     </a>
   );

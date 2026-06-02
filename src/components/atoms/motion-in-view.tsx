@@ -15,10 +15,11 @@ type MotionInViewProps<T extends ElementType> = PolymorphicProps<T> & {
 };
 
 const motionInViewVariants = tv({
+  base: "fill-mode-both",
   variants: {
     didIntersect: {
-      true: "motion-safe:motion-running",
-      false: "motion-safe:motion-paused",
+      true: "running",
+      false: "paused",
     },
   },
   defaultVariants: {

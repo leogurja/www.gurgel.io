@@ -24,6 +24,7 @@ const firaCode = Fira_Code({
   display: "swap",
   style: "normal",
   weight: "variable",
+  preload: true,
 });
 
 export const metadata = {
@@ -91,9 +92,9 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="pt" className="w-full overflow-x-hidden scroll-smooth bg-stone-950">
+    <html lang="pt" className="scroll-smooth">
       <body
-        className={`min-h-screen w-full text-stone-100 antialiased ${inter.variable} ${firaCode.variable} font-inter`}
+        className={`bg-background text-foreground min-h-screen w-full overflow-x-hidden antialiased ${inter.variable} ${firaCode.variable} font-inter`}
       >
         <noscript>Seu navegador não suporta JavaScript.</noscript>
         <Navbar />

@@ -21,7 +21,7 @@ export function ProjectLink({ name, url }: ProjectLinkProps) {
 
   if (url == null)
     return (
-      <Button disabled intent="link">
+      <Button disabled variant="link">
         <Icon className="size-6" /> <span>{name}</span>
       </Button>
     );
@@ -32,7 +32,7 @@ export function ProjectLink({ name, url }: ProjectLinkProps) {
       nativeButton={false}
       // oxlint-disable-next-line jsx-a11y/anchor-has-content jsx-a11y/control-has-associated-label
       render={<a href={url} target="_blank" rel="noreferrer" />}
-      intent="link"
+      variant="link"
     >
       <Icon className="size-6" /> <span>{name}</span>
     </Button>

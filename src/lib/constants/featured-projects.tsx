@@ -58,7 +58,7 @@ export const featuredProjects: Project[] = [
       Site: "https://tetris.gurgel.io",
       Github: "https://github.com/leogurja/tetris",
     },
-    className: "motion-delay-100",
+    className: "delay-100",
   },
   {
     title: "Create TSConfig",
@@ -78,7 +78,7 @@ export const featuredProjects: Project[] = [
       code: <CreateTsConfigCode />,
     },
     tags: ["Node.js", "TypeScript", "NPM"],
-    className: "motion-delay-200",
+    className: "delay-200",
   },
   {
     title: "ESLint Config",
@@ -99,6 +99,6 @@ export const featuredProjects: Project[] = [
       Github: "https://github.com/leogurja/eslint-config",
       NPM: "https://npmjs.com/@gurja/eslint-config",
     },
-    className: "motion-delay-300",
+    className: "delay-300",
   },
 ];

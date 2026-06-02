@@ -27,7 +27,7 @@ export function AboutMeSection() {
               as="li"
               key={xp.name}
               className={twMerge(
-                "motion-safe:motion-preset-slide-left-lg motion-duration-400 motion-ease-spring-bouncy",
+                "animate-in slide-in-from-left ease-out duration-400 fade-in",
                 xp.delay,
               )}
             >

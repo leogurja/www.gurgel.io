@@ -1,5 +1,6 @@
 import { techSites, type TechName } from "@/lib/constants/techs";
 
+import { Button } from "../atoms/button";
 import { ExternalLink } from "../atoms/external-link";
 
 interface BadgeProps {
@@ -9,12 +10,14 @@ interface BadgeProps {
 export function Badge({ name }: BadgeProps) {
   return (
     <li>
-      <ExternalLink
-        href={techSites[name]}
-        className="rounded-full bg-stone-800 px-3 py-1 text-xs leading-5 font-medium no-underline hover:bg-emerald-700 hover:text-white"
+      <Button
+        nativeButton={false}
+        variant="ghost"
+        size="xs"
+        render={<ExternalLink href={techSites[name]} />}
       >
         {name}
-      </ExternalLink>
+      </Button>
     </li>
   );
 }

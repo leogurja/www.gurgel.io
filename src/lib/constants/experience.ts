@@ -7,8 +7,8 @@ export interface Experience {
   site: string;
   role: string;
   period: {
-    from: Date;
-    to?: Date;
+    from: string;
+    to?: string;
   };
   tags: TechName[];
   description: string;
@@ -16,12 +16,29 @@ export interface Experience {
 
 export const experience = [
   {
+    company: "WeHelp",
+    site: "https://wehelpsoftware.com/",
+    role: "Desenvolvedor Front-end",
+    period: {
+      from: "2025-08-19",
+    },
+    tags: ["React", "Next.js", "TypeScript", "TailwindCSS", "Node.js"],
+    description: dedent`
+      Trabalhei no desenvolvimento e manutenção de aplicações web, implementando novas funcionalidades, corrigindo bugs, escrevendo testes automatizados e otimizando a performance e a experiência dos usuários.
+      Participei da internacionalização das aplicações, garantindo suporte a múltiplos idiomas e consistência nas traduções.
+      Também contribuí para a evolução do design system interno, ajudando a manter a consistência visual, a reutilização de componentes e as boas práticas de acessibilidade.
+      Desenvolvi um módulo de análise preditiva de retenção de clientes, auxiliando na identificação de padrões de comportamento e apoiando estratégias para redução de churn.
+      Além disso, criei e mantive pacotes compartilhados com foco na experiência dos desenvolvedores (DX), buscando tornar integrações mais simples, melhorar a reutilização de código e aumentar a produtividade das equipes.
+      Por fim, auxiliei na migração das aplicações para uma arquitetura de monorepo, contribuindo para uma base de código mais organizada, padronizada e fácil de manter.
+    `,
+  },
+  {
     company: "Central IT",
     site: "https://centralit.com.br/",
     role: "Analista Desenvolvedor",
     period: {
-      from: new Date(2019, 11, 16),
-      to: new Date(2023, 5, 15),
+      from: "2021-11-16",
+      to: "2023-04-15",
     },
     tags: [
       "Ruby",
@@ -50,8 +67,8 @@ export const experience = [
     site: "https://sti.uff.br/",
     role: "Estágio em Desenvolvimento de Sistemas",
     period: {
-      from: new Date(2019, 11, 16),
-      to: new Date(2021, 11, 16),
+      from: "2019-11-16",
+      to: "2021-11-16",
     },
     tags: ["Ruby", "Rails", "JavaScript", "MySQL", "Webpack", "CSS"],
     description: dedent`

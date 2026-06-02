@@ -15,7 +15,7 @@ export default function NotFound() {
         <p className="mt-6 text-lg font-medium text-pretty text-stone-500 sm:text-xl/8">
           Desculpe, não encontramos o que você procura.
         </p>
-        <Button nativeButton={false} render={<Link href="/" />} size="xl" className="mt-10">
+        <Button nativeButton={false} render={<Link href="/" />} size="lg" className="mt-10">
           Voltar ao início
         </Button>
       </div>

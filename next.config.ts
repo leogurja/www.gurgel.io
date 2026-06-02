@@ -27,6 +27,7 @@ const nextConfig: NextConfig = {
       expire: 2592000,
     },
   },
+  allowedDevOrigins: ["localhost", "192.168.*.*"],
   async headers() {
     return [
       {

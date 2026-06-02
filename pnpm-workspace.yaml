@@ -1,3 +1,6 @@
+allowBuilds:
+  msw: true
+  sharp: true
 minimumReleaseAgeExclude:
   - "@next/env@16.2.7"
   - "@next/swc-darwin-arm64@16.2.7"
@@ -11,4 +14,3 @@ minimumReleaseAgeExclude:
   - next@16.2.7
   - react-dom@19.2.7
   - react@19.2.7
-trustPolicy: no-downgrade

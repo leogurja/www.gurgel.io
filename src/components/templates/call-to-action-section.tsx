@@ -34,7 +34,7 @@ export function CallToActionSection() {
         </Button>
         <Button
           nativeButton={false}
-          intent="secondary"
+          variant="secondary"
           render={<ExternalLink href="mailto:leo@gurgel.io" />}
           className="hover:text-black"
         >

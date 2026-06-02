@@ -20,16 +20,16 @@ export function ExperienceCard({ role, site, company, tags, period, description 
         </span>
       </h3>
       <p className="flex gap-2 text-sm text-stone-400">
-        <time dateTime={format(period.from, "yyyy-MM-dd")}>
+        <time dateTime={format(new Date(period.from), "yyyy-MM-dd")}>
           {format(period.from, "MMM yyyy", { locale: ptBR })}
         </time>
         -
         {period.to != null ? (
-          <time dateTime={format(period.to, "yyyy-MM-dd")}>
+          <time dateTime={format(new Date(period.to), "yyyy-MM-dd")}>
             {format(period.to, "MMM yyyy", { locale: ptBR })}
           </time>
         ) : (
-          <span>O momento</span>
+          <span>o momento</span>
         )}
       </p>
       <ul className="flex flex-wrap items-center gap-3 py-3">

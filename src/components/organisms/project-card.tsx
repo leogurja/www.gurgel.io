@@ -11,7 +11,7 @@ export function ProjectCard({ title, links, aside, description, tags, className 
   return (
     <MotionInView
       className={twMerge(
-        "motion-safe:even:motion-preset-slide-left motion-safe:odd:motion-preset-slide-right motion-ease-spring-bouncy",
+        "animate-in fade-in even:slide-in-from-right-10 odd:slide-in-from-left-10 ease-out duration-400",
         "group flex flex-col gap-3 transition-transform odd:md:flex-row even:md:flex-row-reverse",
         className,
       )}

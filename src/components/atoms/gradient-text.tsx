@@ -5,7 +5,7 @@ const gradientVariants = tv({
   base: "bg-clip-text text-transparent",
   variants: {
     animated: {
-      false: "bg-gradient-to-r",
+      false: "bg-linear-to-r",
       true: "animate-gradient bg-rainbow",
     },
   },
